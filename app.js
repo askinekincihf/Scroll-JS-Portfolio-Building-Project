@@ -36,15 +36,23 @@ window.addEventListener("scroll", () => {
         navbar.classList.add("fixed-nav");
     }
     else {
-        navbar.classList.remove("fixed-nav")
+        navbar.classList.remove("fixed-nav");
     }
 
     if (scrollHeight > 500) {
-        topLink.classList.add("show-link")
+        topLink.classList.add("show-link");
     }
     else {
-        topLink.classList.remove("show-link")
+        topLink.classList.remove("show-link");
     }
 })
 // ********** smooth scroll ************
 // select links
+const scrollLinks = document.querySelector("scroll-link");
+
+scrollLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+        //
+        e.preventDefault();
+    });
+});
